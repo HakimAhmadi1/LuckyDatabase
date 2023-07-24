@@ -43,7 +43,7 @@
         <div class="form">
           <form class="container mt-3 p-4" id="newentry_form">
 
-            <div class="cross"><i class="fa-solid fa-circle-xmark fa-l"></i></div>
+            <div class="cross"><i class="fa-solid fa-circle-xmark fa-l " id="cross_btn"></i></div>
 
             <div class="form-row">
               <div class="form-group col-md-6">
@@ -57,18 +57,16 @@
             </div>
 
             <div class="form-row">
+
               <div class="form-group col-md-6">
                 <label for="property_type">Property Type</label>
-                <select id="property_type" class="form-control" required>
-                  <option selected>prop1</option>
-                  <option>prop2</option>
-                  <option>prop3</option>
-                </select>
+                <input type="text" class="form-control" id="property_type" required>
+
               </div>
 
               <div class="form-group col-md-6">
                 <label for="Insurance">Insurance</label>
-                <input type="number" class="form-control" id="Insurance" placeholder="Enter number" required>
+                <input type="number" class="form-control" id="Insurance" placeholder="Enter Amount" required>
               </div>
             </div>
 

@@ -147,7 +147,7 @@ body{
 .sidebar .profile .logout{
 /*    background: linear-gradient(to right, #25c481, #25b7c4);*/
     background-color: #25b7c4;
-    margin: 15% 15px 15px 25%;
+    margin: 15% 30px 0px 25%;
     padding: 2% 0 2% 2%;
     font-size: 18px;
     display:flex;

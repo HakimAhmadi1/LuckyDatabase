@@ -269,12 +269,11 @@ class ContactUpdateApi(generics.UpdateAPIView):
     serializer_class = ContactSerializer
 
     def update(self, request, *args, **kwargs):
-        print(request.data)
 
         instance = self.get_object()
         database = instance.database
 
-        if not (database.creator == request.user or database.editor == request.user or request.user.is_superuser):
+        if not (database.creator == request.user or instance.database.editors == request.user  or request.user.is_superuser):
             return Response({'message': 'Permission denied.'}, status=status.HTTP_403_FORBIDDEN)
         
         serializer = self.serializer_class(instance, data=request.data)
@@ -367,7 +366,7 @@ class CompanyUpdateApi(generics.UpdateAPIView):
         instance = self.get_object()
         database = instance.database
 
-        if not (database.creator == request.user or database.editor == request.user or request.user.is_superuser):
+        if not (database.creator == request.user or instance.database.editors == request.user  or request.user.is_superuser):
             return Response({'message': 'Permission denied.'}, status=status.HTTP_403_FORBIDDEN)
         
         serializer = self.serializer_class(instance, data=request.data)
@@ -458,7 +457,7 @@ class PropertyUpdateApi(generics.UpdateAPIView):
         instance = self.get_object()
         database = instance.database
 
-        if not (database.creator == request.user or database.editor == request.user or request.user.is_superuser):
+        if not (database.creator == request.user or instance.database.editors == request.user  or request.user.is_superuser):
             return Response({'message': 'Permission denied.'}, status=status.HTTP_403_FORBIDDEN)
         
         serializer = self.serializer_class(instance, data=request.data)
@@ -550,7 +549,7 @@ class ProjectUpdateApi(generics.UpdateAPIView):
         instance = self.get_object()
         database = instance.database
 
-        if not (database.creator == request.user or database.editor == request.user or request.user.is_superuser):
+        if not (database.creator == request.user or instance.database.editors == request.user  or request.user.is_superuser):
             return Response({'message': 'Permission denied.'}, status=status.HTTP_403_FORBIDDEN)
         
         serializer = self.serializer_class(instance, data=request.data)

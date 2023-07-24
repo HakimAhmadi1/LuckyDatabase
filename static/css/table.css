@@ -96,17 +96,16 @@ form {
 form .cross{
 	color: whitesmoke;
 	display: flex;
-	width: 100%;
-  justify-content:end;
-	margin: 5px;
+  	justify-content:end;
+	margin-left: auto;
 	padding-right: 5px;
 
 }
 form .cross i{
 	width: 25px;
 	height: 25px;
-}
 
+}
 
 form label {
 	color: white;
