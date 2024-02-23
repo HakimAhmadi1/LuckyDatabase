@@ -174,3 +174,8 @@ CSRF_COOKIE_SAMESITE = 'Strict'
 SESSION_COOKIE_SAMESITE = 'Strict'
 CSRF_COOKIE_HTTPONLY = False  # False since we will grab it via universal-cookies
 # SESSION_COOKIE_HTTPONLY = True
+
+
+
+import django_on_heroku
+django_on_heroku.settings(locals())
