@@ -31,7 +31,7 @@ DEBUG = True
 # PublicIPs: 3.21.57.117    PrivateIPs: 172.31.17.92
 
 # ALLOWED_HOSTS = ["3.21.57.117","127.0.0.1"]
-ALLOWED_HOST = []
+ALLOWED_HOST = ['webdevelopment-a1054db9c06d.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
