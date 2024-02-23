@@ -27,7 +27,7 @@ with open(os.path.join(BASE_DIR, 'secrets.json')) as secrets_file:
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 # PublicIPs: 3.21.57.117    PrivateIPs: 172.31.17.92
 
 # ALLOWED_HOSTS = ["3.21.57.117","127.0.0.1"]
