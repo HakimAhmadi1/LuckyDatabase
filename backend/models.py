@@ -34,7 +34,6 @@ class Company(models.Model):
     mailing_address = models.TextField(blank=True, null=True)
     owner = models.TextField(blank=True, null=True)
 
-
     database = models.ForeignKey(Database, on_delete=models.CASCADE, related_name='company_created')
 
     def __str__(self):

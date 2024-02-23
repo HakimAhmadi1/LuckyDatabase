@@ -10,7 +10,7 @@
 	<link rel="icon" type="image/png" href="{% static 'images/icons/favicon.ico'%}"/>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{% static 'css/util.css'%}">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/signin.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/register.css'%}">
 <!--===============================================================================================-->
 </head>
 <body>
@@ -29,27 +29,35 @@
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Enter username">
-						<input class="input100" type="text" name="username" placeholder="Username" id="username">
+						<input class="input100" type="text" name="username" placeholder="Username" id="username" required>
 						
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Enter email">
-						<input class="input100" type="email" name="email" placeholder="Email" id="email">
+						<input class="input100" type="email" name="email" placeholder="Email" id="email" required>
 						
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Enter password">
-						<input class="input100" type="password" name="password" placeholder="Password" id="password">
+						<input class="input100" type="password" name="password" placeholder="Password" id="password" required>
 
 					</div>
 
 					<div class="container-login100-form-btn">
-						<input class="login100-form-btn" type="submit" value="Register">
+						<input class="login100-form-btn" type="submit"
+
+						 value="Register">
 					</div>
+
+
 				</form>
+				<div>
+					<span>Already have an account.<a>Login</a></span>
+				</div>
 
 			</div>
 		</div>
+
 	</div>
 	
 
